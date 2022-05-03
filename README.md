@@ -1,3 +1,2 @@
-# not skidded code you fucks
-`lua you
-`
+# note
+`these aren't skidded code you lot!`
