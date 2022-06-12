@@ -36,10 +36,10 @@ folder1:Toggle("Enabled", function(v)
 		ESP:Toggle(false)
 	end
 end)
-folder1:Toggle("Ghosts", function(v) -- so fucking sorry for adding this because i couldn't figure out teams
+folder1:Toggle("Ghosts", function(v) -- so fucking sorry for adding this because i couldn't figure out teamcheck
     ESP.GhostsESP = v
 end)
-folder1:Toggle("Phantoms", function(v) -- so fucking sorry for adding this because i couldn't figure out teams
+folder1:Toggle("Phantoms", function(v) -- so fucking sorry for adding this because i couldn't figure out teamcheck
     ESP.PhantomsESP = v
 end)
 folder1:Toggle("Boxes", function(v)
@@ -83,3 +83,4 @@ folder2:Slider("FPS Capacity",{
     }, function(v)
     setfpscap(v)
 end)
+print("ESP Loaded")
