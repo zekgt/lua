@@ -80,7 +80,7 @@ ESP:AddObjectListener(game:GetService("Workspace").Policeman1.guard.Dummy, {
 })
 local Section2 = Tab:CreateSection("Extra Sensory Perception")
 Tab:CreateToggle({ -- game:GetService("Workspace").Policeman1.guard.go
-   Name = "ESP Guards | UNCOMPLETE",
+   Name = "ESP Guards | INCOMPLETE",
    CurrentValue = false,
    Callback = function(Value)
         if Value then
