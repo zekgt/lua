@@ -141,7 +141,7 @@ EzAimbot.Enable = function(showfov,fovconfig,key,friendlyfire,smooth)
     end
     MainLoop = RunService.RenderStepped:Connect(function()
         if FOV then
-            FOV.Position = MousePosition()
+            FOV.Position = Vector2.new(Viewport.X/2, Viewport.Y/2)--MousePosition()
         end
         if InputService:IsKeyDown(Enum.KeyCode[Key]) then
             local ClosestPlayer = ClosestPlayer()
