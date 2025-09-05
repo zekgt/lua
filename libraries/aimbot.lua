@@ -132,7 +132,7 @@ EzAimbot.Enable = function(showfov,fovconfig,key,friendlyfire,smooth)
         FOV = Drawing.new("Circle")
         local FOV = FOV
         FOV.NumSides = Sides
-        FOV.Position = MousePosition()
+        FOV.Position = Vector2.new(Viewport.X/2, Viewport.Y/2)--MousePosition()
         FOV.Thickness = 2
         FOV.Radius = Size
         FOV.Color = Color ~= "Rainbow" and Color or Color3.fromRGB(0,0,0)
