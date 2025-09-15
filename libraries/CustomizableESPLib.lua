@@ -1,4 +1,5 @@
 -- This was my first time ever using the drawing library, there's probably 200 issues I haven't found yet. Please tell me if there are any problems.
+-- by Bluwu#3621 and NOT MADE BY ME
 
 
 local Players = game:GetService("Players")
