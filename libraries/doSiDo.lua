@@ -75,6 +75,16 @@ local ESP = {
     Fonts = {};
 }
 
+function ESP:HideAll()
+    local ScreenGui = CoreGui:FindFirstChild("ESPHolder")
+    if ScreenGui then
+        for _, v in pairs(ScreenGui:GetChildren()) do
+            v:Destroy()
+        end
+    end
+end
+
+
 -- Def & Vars
 local Euphoria = ESP.Connections;
 local lplayer = Players.LocalPlayer;
