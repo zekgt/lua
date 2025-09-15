@@ -155,7 +155,7 @@ do -- Initalize
             ScreenGui[plr.Name]:Destroy()
         end
     end
-
+    
     function ESP:CreateESPForPlayer(plr)
         if not ESP.Enabled then return end
         coroutine.wrap(DupeCheck)(plr) -- Dupecheck
@@ -419,12 +419,12 @@ do -- Initalize
     do -- Update ESP
         for _, v in pairs(game:GetService("Players"):GetPlayers()) do
             if v.Name ~= lplayer.Name then
-                coroutine.wrap(CreateESPForPlayer)(v)
+                coroutine.wrap(function() ESP:CreateESPForPlayer(v) end)()
             end      
         end
         --
         game:GetService("Players").PlayerAdded:Connect(function(v)
-            coroutine.wrap(CreateESPForPlayer)(v)
+            coroutine.wrap(function() ESP:CreateESPForPlayer(v) end)()
         end);
     end;
 end;
