@@ -22,7 +22,7 @@ local InputService = game:GetService("UserInputService")
 local TweenService = game:GetService("TweenService")
 local FOVColor = Color3.fromRGB(0,0,0)
 local MousePosition = function()
-    return Vector2.new(Mouse.X,Mouse.Y+36)
+    return Vector2.new(Mouse.X,Mouse.Y-36)
 end
 local NotObstructing = function(destination, ignore) -- Rewrote by Stefanuk12
     local Origin = workspace.CurrentCamera.CFrame.p
