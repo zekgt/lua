@@ -22,7 +22,7 @@ local InputService = game:GetService("UserInputService")
 local TweenService = game:GetService("TweenService")
 local FOVColor = Color3.fromRGB(0,0,0)
 local MousePosition = function()
-    return Vector2.new(Mouse.X,Mouse.Y)
+    return Vector2.new(Mouse.X,Mouse.Y+36)
 end
 local NotObstructing = function(destination, ignore) -- Rewrote by Stefanuk12
     local Origin = workspace.CurrentCamera.CFrame.p
@@ -132,7 +132,7 @@ EzAimbot.Enable = function(showfov,fovconfig,key,friendlyfire,smooth)
         FOV = Drawing.new("Circle")
         local FOV = FOV
         FOV.NumSides = Sides
-        FOV.Position = Vector2.new(Viewport.X/2, Viewport.Y/2)--MousePosition()
+        FOV.Position = MousePosition() --Vector2.new(Viewport.X/2, Viewport.Y/2)
         FOV.Thickness = 2
         FOV.Radius = Size
         FOV.Color = Color ~= "Rainbow" and Color or Color3.fromRGB(0,0,0)
@@ -141,7 +141,7 @@ EzAimbot.Enable = function(showfov,fovconfig,key,friendlyfire,smooth)
     end
     MainLoop = RunService.RenderStepped:Connect(function()
         if FOV then
-            FOV.Position = Vector2.new(Viewport.X/2, Viewport.Y/2)--MousePosition()
+            FOV.Position = MousePosition() --Vector2.new(Viewport.X/2, Viewport.Y/2)
         end
         if InputService:IsKeyDown(Enum.KeyCode[Key]) then
             local ClosestPlayer = ClosestPlayer()
